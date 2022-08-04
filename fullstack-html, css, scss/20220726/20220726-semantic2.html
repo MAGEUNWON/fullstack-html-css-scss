@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    /* 시작할 때 border 해놓으면 배치가 보여서 좀 더 편함 */
+    *{
+      border:1px solid red;
+    }
+    body{
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    .body-div{
+      width: 100vw;
+      height: 100vh;
+    }
+
+    header{
+      height:10vh;
+      background-color: grey;
+    }
+
+    main{
+      height:80vh;
+      background-color: antiquewhite;
+    }
+
+    section{
+      padding: 40px;
+      border: 1px dashed black;
+    }
+    /* border: 1px dashed black;
+      display: flex; 
+      flex-direction:column;
+      align-items: center;*/
+      
+    /* 구글로고 */
+    article{
+      width: 90vw;
+      height: 10vh;
+      background-color: white;
+      display: inline-block;
+    }
+    /* 입력창-input? */
+    aside{
+      width: 70vw;
+      height: 5vh;
+      background-color: white;
+      display: inline-block;
+      margin-left: 40px; 
+      margin-top: 20px;
+    }
+
+    .div-style{
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+    }
+
+
+    /* .div-wrap{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      얘로 설정하면 마진이나 패딩 안넣어도 가운데로 정렬할 수 있음
+    }
+     */
+    
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <header></header>
+    <main>
+      <section>
+        <article></article>
+        <aside></aside>
+        <div class="div-wrap">
+          <div>
+            <div class="div-style"></div>
+            <div class="div-style"></div>
+            <div class="div-style"></div>
+          </div>
+          <div>
+            <div class="div-style"></div>
+            <div class="div-style"></div>
+            <div class="div-style"></div>
+          </div>
+        </div>
+      </section>
+    
+    </main>
+  </div>
+
+
+</body>
+</html>

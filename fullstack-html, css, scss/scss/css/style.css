@@ -1,0 +1,15 @@
+h1 {
+  font-size: 32px;
+  color: red;
+}
+
+p {
+  font-size: 32px;
+  color: blue;
+}
+
+div {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(128, 208, 223);
+}/*# sourceMappingURL=style.css.map */

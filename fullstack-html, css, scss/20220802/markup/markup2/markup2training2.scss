@@ -1,0 +1,101 @@
+// color set-> 주석으로 이름 써두면 찾을 때 편함 
+$col-1:rgb(231, 228, 228);
+$col-2: rgb(245, 235, 235);
+// 색깔같이 변경의 여지가 높은 값들은 변수로 지정해 놓는것이 수정할 때 편함
+
+@mixin flex-setting($justify, $align, $direction:row) {
+  display: flex;
+  justify-content:$justify;
+  align-items:$align;
+  flex-direction:$direction;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  // 여기다가 배경을 줘야하나?
+
+  &>header{
+    width: inherit;
+    height: 5vh;
+    background-color: $col-1;
+    
+    @include flex-setting(right,initial,row);
+    // right과 flex-end랑 무슨 차이지?
+    backdrop-filter: (3px);
+    // 위에 필터로 블러 주는게 좋음
+    // filter:blur(5px);
+    
+    // 보통 position-fixed로 고정을 많이 함. 브라우저에서 휠 내릴때 고정하려고 
+    
+    &>nav{
+      width: 50vw;
+      height: 30vh;
+      position: absolute;
+      // z-index:1 로 해주면 글씨 올라감
+      
+      @include flex-setting(center,center,row);
+      background-color: gray;
+      margin-top: 15px;
+      margin-right: 15px;
+      background-color: rgba(0, 0, 0, 0.3);
+      // rgba를 (0, 0, 0, 0.3) 주고 투명도 해주면 검정색 투명도 생김
+      
+      // background-color: rgba(47, 138, 241, 0.3); 얘는 색이 파란색으로 투명해짐
+      // opacity: 0.2; 얘는 글자까지 다 투명해짐 어떻게 배경만 투명하게 하지??
+      
+      &>ul{
+        width: 25vw;
+        height: 35vh;
+        list-style: none;
+        @include flex-setting(center,center,column);
+        // line-height:30px;
+        // li에 height를 주는 것도 간격을 만들 수 있음
+        
+
+        &>li{
+          font-size: 15px;
+          color:$col-2;
+          heigth:7vh;
+        }
+
+        &>li:nth-child(1){
+          font-size: 3vw;
+          position: relative;
+          top: -30px;
+          // margin이나 padding으로 올려도 됨
+        }
+      
+        
+      }
+    }
+
+    }
+  &>main{
+    width: 100vw;
+    // 또는 그냥 inherit줘도 됨 100이니까
+    height: 70vh;
+    @include flex-setting(flex-end,initial,column);
+    padding-bottom: 50px;
+    padding-left: 30px;
+    background-color: rgb(52, 51, 51);
+    // 색깔 한번만 쓰여도 일단 변수 만들어 두는게 수정할 때 편함
+    &>div{
+      width: 50vw;
+      padding-bottom: 50px;
+      // div에 크기 안주고 p 에 줘도 됨
+      &>h1{
+        font-size:50px;
+        // rem; 단위는 뭐지
+        color: $col-2;
+      }
+      &>p{
+        font-size: 10px;
+        color: $col-2;
+      }  
+    }
+    }  
+  }
+

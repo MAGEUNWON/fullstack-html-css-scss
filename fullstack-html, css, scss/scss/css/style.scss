@@ -1,0 +1,23 @@
+$font-size:32px;
+$color: red;
+$blue-color: blue;
+$width:500px;
+$height:500px;
+$bgcolor:rgb(128, 208, 223);
+
+
+h1{
+  font-size:$font-size;
+  color: $color;
+}
+
+p{
+  font-size: $font-size;
+  color: $blue-color;
+}
+
+div{
+  width: $width;
+  height: $height;
+  background-color: $bgcolor;
+}

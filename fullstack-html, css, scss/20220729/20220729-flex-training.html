@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    body{
+      width: 100%vw;
+      height: 100%vh;
+    }
+
+    .flex{
+      display: flex;
+    }
+
+    .fd-column{
+      flex-direction: column;
+    }
+
+    .jc-space-around{
+      justify-content: space-around;
+    }
+
+    .ac-space-around{
+      align-content: space-around ;
+    }
+
+    .ac-between{
+      align-content: space-between;
+    }
+
+    .ai-center{
+      align-items: center;
+    }
+
+    .flex-wrap{
+      flex-wrap: wrap;
+    }
+
+    .div-size-300-600{
+      width: 300px;
+      height: 600px;
+    }
+
+
+    .div-size-100-100{
+      width: 100px;
+      height: 100px;
+    }
+
+  .div-size-80-80{
+    width: 80px;
+    height: 80px;
+  }
+
+  .div-size-50-50{
+    width: 50px;
+    height: 50px;
+  }
+  
+  </style>
+</head>
+<body class="flex">
+  <div class="flex fd-column div-size-300-600 jc-space-around ai-center">
+    <div class="div-size-100-100"></div>
+    <div class="div-size-100-100"></div>
+    <div class="div-size-100-100"></div>
+  </div>
+  <div class="flex div-size-300-600 ai-center jc-space-around">
+    <div class="div-size-80-80"></div>
+    <div class="div-size-80-80"></div>
+    <div class="div-size-80-80"></div>
+  </div>
+  <div class="flex flex-wrap div-size-300-600 ac-space-around jc-space-around">
+    <div class="div-size-50-50"></div>
+    <div class="div-size-50-50"></div>
+    <div class="div-size-50-50"></div>
+    <div class="div-size-50-50"></div>
+    <div class="div-size-50-50"></div>
+    <div class="div-size-50-50"></div>
+  </div>
+</body>
+</html>

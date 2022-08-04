@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 500px;
+      height:500px;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+    }
+
+    body>div{
+      width: 150px;
+      height:400px;
+      /* background-color: bisque; */
+    }
+
+    body>div:nth-child(2){
+      background-color: rgb(211, 205, 205);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      
+    }
+
+  
+
+    body>div:nth-child(4){
+      width: 390px;
+      height: 300px;
+      border: 3px solid black;
+      box-sizing: border-box;
+      background-color: transparent;
+      position: absolute;
+      top:105px;
+      left:50px;
+    }
+
+    body>div>div:nth-child(1){
+      width: inherit;
+      height: 90px;
+      background-color: gray;
+    }
+    
+    body>div:nth-child(2)>div:nth-child(1){
+      width: 150px;
+      height: 50px;
+      background-color: gray;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position:absolute;
+      top:80px;
+      left:250px;
+      /* position: relative;
+      top:20px;
+      left: 50px; */
+      /* relative로 하면 글자 위치 안변하고 조정할 수 있음. 위에 플렉스로 묶어놔서 지금은 일단 absolute로 함 */
+    }
+
+    /* 작은 div들 */
+    body>div:nth-child(2)>div:nth-child(1)>div{
+      width: 25px;
+      height: 35px;
+      background-color: rgb(211, 205, 205);
+    }
+
+    body>div:nth-child(3){
+      display: flex;
+      justify-content: center;  
+      align-items:flex-end;
+    }
+
+    body>div:nth-child(3)>div:nth-child(1){
+      width: inherit;
+      height: 90px;
+      background-color:gray;
+      
+    }
+
+    p{
+      font-size: 10px;
+    }
+  
+
+  </style>
+</head>
+<body>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div>
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div>
+      <h2>hello</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus inventore asperiores impedit velit expedita sequi nihil, eos optio ducimus incidunt dolores? Molestias possimus, labore laudantium maxime rerum harum nemo ipsam.</p>
+    </div>
+  </div>
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+  <div></div>
+</body>
+</html>
+
+<!-- 얘처럼 일단 크게 세 덩이로 묶어서 틀에 두고 시작하면 한번에 제어하기 편하고 반응형일 때 변화가 없음. 하지만 낱개로 하나하나 세밀한 조정을 하기는 어려움. -->

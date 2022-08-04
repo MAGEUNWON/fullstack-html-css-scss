@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding:0;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    .grid{
+      display: grid;
+    }
+
+    .gt-columns{
+      grid-template-columns: 1fr 1fr 1fr;
+      /* repeat(3, 1fr)이라고 쓰면 위에 쓴거랑 같은 뜻 */
+      /* grid-template-columns: 100px 100px 100px 100px; */
+      /* px로 설정하면 너비가 고정되서 화면의 너비가 넓어졌을 때 공간(화면 옆 여백)이 발생. 화면 너비가 좁아지면 grid-item이 잘릴 수도 있음. 때문에 fr(fraction)이라는 단위를 쓰면(1fr 1fr 1fr = 1:1:1 비율) 화면 너비에 따라 자동으로 늘어나고 줄어듬*/
+    }
+
+    .row-gap{
+      row-gap:20px;
+    }
+
+    .columns-gap{
+      column-gap: 10px;
+    }
+
+    .gt-rows{
+      grid-template-rows: 200px 200px 500px;
+    }
+
+    .g-auto-row{
+      grid-auto-rows: minmax(100px, auto);
+
+  }
+    .div-size-800-800{
+      width: 800px;
+      height: 800px;
+    }
+
+    .div-size-200-200{
+      width: 200px;
+      height: 200px;
+    }
+
+    .ai-center{
+      align-items: center;
+    }
+
+    .ji-center{
+      justify-items:center
+    }
+
+    .place-items{
+      place-items: center stretch;
+    }
+
+    /* place-items align-items와 justify-items를 같이 쓸 수 있는 속성.
+       align-items, justify-items의 순서로 작성하고 하나의 값만 쓰면 두 속성 모두에 적용 */
+
+    
+
+  </style>
+</head>
+<body>
+  <div class="grid div-size-800-800 gt-columns row-gap columns-gap g-auto-row ai-center ji-center">
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+    <div class="div-size-200-200"></div>
+  </div>
+</body>
+</html>

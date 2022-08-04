@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    *{
+      box-sizing: border-box;
+    }
+    /* 전체 선택으로 해주고 미리 넣어주면 border 까지 계산해서 넓이, 높이 알아서 맞춰줌 */
+
+    main{
+      width: 500px;   /* 넓이 높이 지정 안해주면 flex 설정해도 안나옴 */
+      height: 500px;
+      border:2px solid black;
+
+      /* display: flex;
+      justify-content: center;  
+      align-items: center;   */
+      
+      /* 가로처리 한 것 =(부모너비 - 자식너비) / 2  */
+      /* 세로를 가운데 처리 한 것 */
+      /* 요 3개를 class로 묶어 놓으면 계속 쓰기 편함 */
+    }
+
+    .dp-flex{
+      display: flex;
+    }
+    .justify-content-center{
+      justify-content: center;
+    }
+    .align-items-center{
+      align-items: center;
+    }
+
+    main > section{    /* > 는 main의 바로 밑 section만 선택했다는 의미 */
+      width: 400px;
+      height: 400px;
+      border: 1px solid red;
+
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+  <main class="dp-flex justify-content-center align-items-center">
+    <section class="dp-flex justify-content-center align-items-center">
+      <article>hello</article>
+    </section>
+  </main>
+</body>
+</html>
