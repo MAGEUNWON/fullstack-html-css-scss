@@ -1,0 +1,840 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+*{border:1px solid red;}
+
+$col-1:#2196F3;
+$col-2:#004EA2;
+$col-3:#CDCDCD;
+$col-4:#FFFFFF;
+
+@mixin size($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-setting($justify, $align, $direction:row){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction; 
+}
+
+#root{
+  @include size(100vw,100vh);
+  overflow-x: hidden;
+
+  &>header{
+    @include size(100vw,auto);
+
+    &>div{
+      @include size(100vw,auto);
+      @include flex-setting(space-around,flex-end);
+      background-color: $col-1;
+      color: $col-4;
+
+      &>div:nth-child(2){
+        @include flex-setting(center,center);
+      }
+
+      &>div:nth-child(3){
+        background-color: $col-4;
+        color: $col-1;
+      }
+
+      
+    }
+
+    &>nav{
+
+      @for $i from 2 through 5 {
+        &>div:nth-child(#{$i}){
+        display: none;
+        }
+
+        @include flex-setting(space-around,center);
+        @include size(100vw,auto);
+
+        &>div:nth-child(1){
+          background-color: $col-2;
+          color: $col-4;
+        }
+        
+      }
+      // scss for 반복문 문법 
+
+
+  
+    }
+
+
+  
+  }
+
+
+  &>main{
+    @include size(100vw,auto);
+    @include flex-setting(center,center,column);
+
+    &>div:nth-child(1){
+      @include size(90vw,auto);
+      @include flex-setting(center,center);
+      background-color: #CDCDCD;
+
+      &>ul{
+        @include flex-setting(center,flex-start,column);
+      }
+    }
+
+    &>div:nth-child(2){
+      @include size(100vw,auto);
+      @include flex-setting(center,center,column);
+      background-color: $col-4;
+
+      &>div:nth-child(1){
+        @include size(80vw,auto);
+        @include flex-setting(center,center);
+
+        &>h1{
+          color:$col-2;
+          
+        }
+  
+        &>span{
+          color: $col-1;
+          font-size: 0.4rem;
+        }
+
+      }
+
+      &>div:nth-child(2){
+        @include flex-setting(center,center,column);
+        @include size(50vw,auto);
+
+        &>div{
+          @include flex-setting(center,center,column);
+          @include size(10vw,3vh);
+        }
+
+        &>p{
+          color: $col-1;
+          font-size: 0.4rem;
+        }
+      }
+
+    }
+
+    &>div:nth-child(3){
+      @include flex-setting(center,center,column);
+      @include size(60vw,auto);
+      background-color:$col-1;
+
+      &>div:nth-child(1){
+        @include flex-setting(center,flex-start,column);
+        
+        &>h2{
+          color:$col-4;
+        }
+
+        &>p{
+          color:$col-4;
+        }
+
+        &>div:nth-child(3){
+        @include flex-setting(center,center);
+        @include size(50vw,auto);
+        
+          &>span:nth-child(1){
+            color: $col-4;
+          }
+
+          &>span:nth-child(2){
+            color: $col-4;
+            font-size:0.5rem;
+            text-align: left;
+          }
+
+      }
+
+
+      }
+
+      &>div:nth-child(2){
+        @include size(3vw,3vh);
+      }
+      // 화살표
+
+      &>div:nth-child(3){
+        @include size(100vw,auto);
+        @include flex-setting(center,center,column );
+        color:$col-1;
+
+        &>div:nth-child(1){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+        &>div:nth-child(2){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+        &>div:nth-child(3){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+        &>div:nth-child(4){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+      }
+    }
+
+    &>div:nth-child(4){
+      @include size(100vw,auto);
+      @include flex-setting(center,center ,column );
+
+      &>p{
+        font-size: 5rem;
+      }
+
+      &>div{
+        @include flex-setting(center,center);
+        @include size(100vw,auto);
+
+        &>div:nth-child(1){
+          background-color: $col-1;
+
+          &>h3{
+            color:$col-4;
+            text-align: center;
+          }
+
+          &>p{
+            color: $col-4;
+            text-align: center;
+          }
+        }
+
+        &>div:nth-child(2){
+          background-color: $col-1;
+
+          &>h3{
+            color:$col-4;
+            text-align: center;
+          }
+
+          &>p{
+            color: $col-4;
+            text-align: center;
+          }
+
+        }
+
+        &>div:nth-child(3){
+          background-color: $col-1;
+
+          &>h3{
+            color:$col-4;
+            text-align: center;
+          }
+
+          &>p{
+            color: $col-4;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+  }
+
+  &>footer{
+    @include size(100vw,auto );
+    @include flex-setting(space-around,center,column);
+    background-color: $col-1;
+
+    &>div:nth-child(1){
+      @include flex-setting(space-around,center,column);
+
+      &>h3{
+        color: $col-4;
+        text-align: center;
+      }
+
+      &>div:nth-child(2){
+        @include size(100vw,auto);
+        @include flex-setting(space-around,center);
+
+        &>div:nth-child(1){
+          color: $col-4;
+          @include flex-setting(space-around,center);
+        }
+
+        &>div:nth-child(2){
+          background-color: $col-4;
+          color: $col-1;
+      }
+
+    }
+    
+    
+
+    }
+
+    &>div:nth-child(2){
+      color: $col-4;
+    }
+  }
+
+  //mobile
+  
+  @media(max-width: 768px){
+
+  }
+
+
+  //tablet
+  
+  @media(min-width:769px) and (max-width:1024px){
+
+
+  &>header{
+    @include size(100vw,auto);
+
+    &>div{
+      @include size(100vw,auto);
+      @include flex-setting(space-around,flex-end);
+      background-color: $col-1;
+      color: $col-4;
+
+      &>div:nth-child(2){
+        @include flex-setting(center,center);
+      }
+
+      &>div:nth-child(3){
+        background-color: $col-4;
+        color: $col-1;
+      }
+
+      
+    }
+
+
+    &>nav{
+
+      @for $i from 1 through 5 {
+        &>div:nth-child(#{$i}){
+          @include flex-setting(space-around,center);
+          @include size(100vw,auto);
+        }
+        
+      }
+
+      &>div:nth-child(1){
+        background-color: $col-2;
+        color:$col-4;
+      }
+
+    }
+  }
+
+
+  &>main{
+    @include size(100vw,auto);
+    @include flex-setting(center,center,column);
+
+    &>div:nth-child(1){
+      @include size(90vw,auto);
+      @include flex-setting(center,center);
+      background-color: #CDCDCD;
+
+      &>ul{
+        @include flex-setting(center,flex-start,column);
+      }
+    }
+
+    &>div:nth-child(2){
+      @include size(100vw,auto);
+      @include flex-setting(center,center,column);
+      background-color: $col-4;
+
+      &>div:nth-child(1){
+        @include size(80vw,auto);
+        @include flex-setting(center,center,column);
+
+        &>h1{
+          color:$col-2;
+          text-align: center;
+        }
+  
+        &>span{
+          color: $col-1;
+        }
+
+      }
+
+      &>div:nth-child(2){
+        @include flex-setting(center,center,column);
+        @include size(50vw,auto);
+
+        &>div{
+          @include flex-setting(center,center,column);
+          @include size(10vw,3vh);
+        }
+
+        &>p{
+          color: $col-1;
+        }
+      }
+
+    }
+
+    &>div:nth-child(3){
+
+      @include flex-setting(space-around,center);
+      @include size(90vw,auto);
+      background-color:$col-1;
+
+      &>div:nth-child(1){
+        @include flex-setting(center,center,column);
+        
+        &>h2{
+          color:$col-4;
+        }
+
+        &>p{
+          color:$col-4;
+        }
+
+        &>div:nth-child(3){
+        @include flex-setting(center,flex-start,column);
+        @include size(50vw,auto);
+        
+          &>span:nth-child(1){
+            color: $col-4;
+          }
+
+          &>span:nth-child(2){
+            color: $col-4;
+          }
+
+      }
+
+
+      }
+
+      &>div:nth-child(2){
+        @include size(3vw,3vh);
+      }
+      // 화살표
+
+      &>div:nth-child(3){
+        @include size(100vw,auto);
+        @include flex-setting(center,center,column );
+        color:$col-1;
+
+        &>div:nth-child(1){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+        &>div:nth-child(2){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+        &>div:nth-child(3){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+        &>div:nth-child(4){
+          @include flex-setting(space-around,center);
+          background-color: $col-4;
+
+        }
+
+      }
+
+    }
+
+    &>div:nth-child(4){
+      @include size(100vw,auto);
+      @include flex-setting(center,center ,column );
+
+      &>p{
+        font-size: 3rem;
+      }
+
+      &>div{
+        @include flex-setting(center,center);
+        @include size(100vw,auto);
+
+        &>div:nth-child(1){
+          background-color: $col-1;
+
+          &>h3{
+            color:$col-4;
+            text-align: center;
+          }
+
+          &>p{
+            color: $col-4;
+            text-align: center;
+          }
+        }
+
+        &>div:nth-child(2){
+          background-color: $col-1;
+
+          &>h3{
+            color:$col-4;
+            text-align: center;
+          }
+
+          &>p{
+            color: $col-4;
+            text-align: center;
+          }
+
+        }
+
+        &>div:nth-child(3){
+          background-color: $col-1;
+
+          &>h3{
+            color:$col-4;
+            text-align: center;
+          }
+
+          &>p{
+            color: $col-4;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+  }
+
+  &>footer{
+
+    @include size(100vw,auto );
+    @include flex-setting(center,center);
+    background-color: $col-1;
+
+    &>div:nth-child(1){
+      @include flex-setting(space-around,center,column);
+      @include size(50vw,auto);
+
+      &>h3{
+        color: $col-4;
+        text-align: center;
+      }
+
+      &>div:nth-child(2){
+        @include size(100vw,auto);
+        @include flex-setting(space-around,space-around,column);
+
+        &>div:nth-child(1){
+          color: $col-4;
+          @include flex-setting(space-around,center);
+        }
+
+        &>div:nth-child(2){
+          background-color: $col-4;
+          color: $col-1;
+      }
+
+    }
+    
+    }
+
+    &>div:nth-child(2){
+      color: $col-4;
+    }
+  }
+
+  }
+
+  // pc
+
+  @media(min-width:1025px){
+
+    &>header{
+
+      @include size(100vw,auto);
+  
+      &>div{
+
+        @include size(100vw,auto);
+        @include flex-setting(space-around,flex-end);
+        background-color: $col-1;
+        color: $col-4;
+        position: relative;
+  
+        &>div:nth-child(1){
+          @include size(0,0);
+        }
+
+        &>div:nth-child(2){
+          position: absolute;
+          left:2vw;
+        }
+
+        
+      }
+  
+      &>nav{
+        
+        @include size(50vw,auto);
+
+        @for $i from 1 through 5 {
+          &>div:nth-child(#{$i}){
+            @include flex-setting(flex-start,center);
+          
+
+          }
+          
+        }
+  
+        &>div:nth-child(1){
+          background-color: $col-2;
+          color:$col-4;
+        }
+        // scss for 반복문 문법 
+    
+      }    
+    }
+  
+  
+    &>main{
+      @include size(100vw,auto);
+      @include flex-setting(center,center,column);
+  
+      &>div:nth-child(1){
+        @include size(90vw,auto);
+        @include flex-setting(center,center);
+        background-color: #CDCDCD;
+  
+        &>ul{
+          @include flex-setting(center,flex-start,column);
+        }
+      }
+  
+      &>div:nth-child(2){
+        @include size(100vw,auto);
+        @include flex-setting(center,center,column);
+        background-color: $col-4;
+  
+        &>div:nth-child(1){
+          @include size(80vw,auto);
+          @include flex-setting(center,center,column);
+  
+          &>h1{
+            color:$col-2;
+            
+          }
+    
+          &>span{
+            color: $col-1;
+          }
+  
+        }
+  
+        &>div:nth-child(2){
+          @include flex-setting(center,center,column);
+          @include size(50vw,auto);
+  
+          &>div{
+            @include flex-setting(center,center,column);
+            @include size(10vw,3vh);
+          }
+  
+          &>p{
+            color: $col-1;
+          }
+        }
+  
+      }
+  
+      &>div:nth-child(3){
+        @include flex-setting(center,center,column);
+        @include size(100vw,auto);
+        background-color:$col-1;
+  
+        &>div:nth-child(1){
+          @include size(90vw,auto);
+          @include flex-setting(center,flex-start);
+          position: relative;
+          
+          &>h2{
+            color:$col-4;
+            font-size: 5rem;
+            text-align: center;
+            @include size(80vw,auto);
+
+          }
+  
+          &>p{
+            color:$col-4;
+            font-size: 0.8rem;
+            margin-top: 5vw;
+          }
+  
+          &>div:nth-child(3){
+          @include flex-setting(center,flex-start,column);
+          font-size: 0.8rem;
+          @include size(50vw,auto);
+          position: absolute;
+          top:8vw;
+          left:40.5vw;
+
+            &>span:nth-child(1){
+              color: $col-4;
+            }
+  
+            &>span:nth-child(2){
+              color: $col-4;
+            }
+  
+        }
+  
+  
+        }
+  
+        &>div:nth-child(2){
+          @include size(3vw,3vh);
+        }
+        // 화살표
+  
+        &>div:nth-child(3){
+          @include size(100vw,auto);
+          @include flex-setting(space-around,center);
+          color:$col-1;
+          font-size: 0.4rem;
+          background-color: $col-1;
+  
+          &>div{
+            @include size(25vw,auto);
+            @include flex-setting(space-around,center);
+            background-color:$col-1;
+
+            
+            
+  
+          }
+  
+          
+  
+        }
+      }
+  
+      &>div:nth-child(4){
+        @include size(100vw,auto);
+        @include flex-setting(center,center ,column );
+  
+        &>p{
+          font-size: 5rem;
+        }
+  
+        &>div{
+          @include flex-setting(center,center);
+          @include size(100vw,auto);
+  
+          &>div:nth-child(1){
+            background-color: $col-1;
+  
+            &>h3{
+              color:$col-4;
+              text-align: center;
+            }
+  
+            &>p{
+              color: $col-4;
+              text-align: center;
+            }
+          }
+  
+          &>div:nth-child(2){
+            background-color: $col-1;
+  
+            &>h3{
+              color:$col-4;
+              text-align: center;
+            }
+  
+            &>p{
+              color: $col-4;
+              text-align: center;
+            }
+  
+          }
+  
+          &>div:nth-child(3){
+            background-color: $col-1;
+  
+            &>h3{
+              color:$col-4;
+              text-align: center;
+            }
+  
+            &>p{
+              color: $col-4;
+              text-align: center;
+            }
+          }
+        }
+      }
+  
+    }
+  
+    &>footer{
+      @include size(100vw,auto );
+      @include flex-setting(space-around,center,column);
+      background-color: $col-1;
+  
+      &>div:nth-child(1){
+        @include flex-setting(space-around,center,column);
+  
+        &>h3{
+          color: $col-4;
+          text-align: center;
+        }
+  
+        &>div:nth-child(2){
+          @include size(100vw,auto);
+          @include flex-setting(space-around,center);
+  
+          &>div:nth-child(1){
+            color: $col-4;
+            @include flex-setting(space-around,center);
+          }
+  
+          &>div:nth-child(2){
+            background-color: $col-4;
+            color: $col-1;
+        }
+  
+      }
+      
+      }
+  
+      &>div:nth-child(2){
+        color: $col-4;
+      }
+
+    }
+
+  }
+  
+
+}
