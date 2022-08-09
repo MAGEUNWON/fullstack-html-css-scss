@@ -1,0 +1,74 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+*{border: 1px solid red;}
+
+
+$col-1: #122023;
+$col-2: #FFF7E1;
+$col-3: #F7F9FA;
+$col-4: #19CE60;
+$col-5: #DAE1E6;
+
+@mixin size($width, $height){ 
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-setting($justify, $align, $direction:row){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+#root{
+  @include size(100vw,auto);
+  @include flex-setting(center,center);
+  overflow-x: hidden;
+
+  &>div{
+    @include size(5vw,100vh);
+    background-color: $col-4;
+    padding-top: 10vh;
+
+      &>div:nth-child(1){
+        @include size(inherit,15vh);
+        @include flex-setting(space-evenly,center,column);
+        
+      
+
+        &>div{
+          @include size(0.8rem, 0.8rem);
+          background-color: $col-2;
+          border-radius: 50%;
+        }
+        
+      }
+  }
+  // 여기까지 #root 첫번째 div
+
+  &>main{
+    @include size(95vw,auto);
+    
+    &>section{
+      @include size(95vw,auto);
+
+      &>div{
+        @include size(95vw,auto);
+
+        &>h1{
+          color:$col-4;
+        }
+
+        &>div{
+          background-color: $col-4;
+
+          &>p{
+            color:$col-3;
+          }
+        }
+      }
+    }
+
+  }
+
+}

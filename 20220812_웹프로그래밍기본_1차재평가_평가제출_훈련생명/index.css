@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  border: 1px solid red;
+}
+
+#root {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+#root > div {
+  width: 5vw;
+  height: 100vh;
+  background-color: #19CE60;
+  padding-top: 10vh;
+}
+#root > div > div:nth-child(1) {
+  width: inherit;
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#root > div > div:nth-child(1) > div {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #FFF7E1;
+  border-radius: 50%;
+}
+#root > main {
+  width: 95vw;
+  height: auto;
+}
+#root > main > section {
+  width: 95vw;
+  height: auto;
+}
+#root > main > section > div {
+  width: 95vw;
+  height: auto;
+}
+#root > main > section > div > h1 {
+  color: #19CE60;
+}
+#root > main > section > div > div {
+  background-color: #19CE60;
+}
+#root > main > section > div > div > p {
+  color: #F7F9FA;
+}/*# sourceMappingURL=index.css.map */
