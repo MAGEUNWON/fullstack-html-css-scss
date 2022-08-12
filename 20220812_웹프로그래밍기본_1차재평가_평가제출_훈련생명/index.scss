@@ -1,5 +1,6 @@
 *{margin:0; padding:0; box-sizing: border-box;}
-*{border: 1px solid red;}
+
+
 
 
 $col-1: #122023;
@@ -7,6 +8,7 @@ $col-2: #FFF7E1;
 $col-3: #F7F9FA;
 $col-4: #19CE60;
 $col-5: #DAE1E6;
+$col-6: #FFFFFF;
 
 @mixin size($width, $height){ 
   width: $width;
@@ -26,9 +28,10 @@ $col-5: #DAE1E6;
   overflow-x: hidden;
 
   &>div{
-    @include size(5vw,100vh);
+    @include size(5vw,180vh);
     background-color: $col-4;
     padding-top: 10vh;
+    @include flex-setting(flex-start,center,column);
 
       &>div:nth-child(1){
         @include size(inherit,15vh);
@@ -48,27 +51,1659 @@ $col-5: #DAE1E6;
 
   &>main{
     @include size(95vw,auto);
+    @include flex-setting(space-evenly,center,column);
     
-    &>section{
-      @include size(95vw,auto);
+    &>section:nth-child(1){
+      @include size(95vw,60vh);
+      @include flex-setting(center,center,column);
 
-      &>div{
-        @include size(95vw,auto);
+      &>div:nth-child(1){
+        @include size(95vw,50vw);
+        @include flex-setting(center,center ,column );
+        
+        
+        &>div:nth-child(1){
+          @include size(95vw,auto );
+          @include flex-setting(end,center);
 
-        &>h1{
-          color:$col-4;
+          &>div{
+
+            @include size(50vw,auto);
+            @include flex-setting(space-between,center);
+            
+  
+            &>h1{
+              @include size(20vw,auto );
+              color:$col-4;
+              text-align: center;
+              font-size: 2rem;
+            }
+  
+            &>div{
+              background-color: $col-4;
+              @include size(6rem,auto);
+              @include flex-setting(center,center);
+              border-radius: 0.5rem;
+  
+              &>span{
+                color:$col-3;
+                text-align: center;
+                
+              }
+  
+            }
+  
+          }
+
         }
+        // 여기까지 waver. happy 
+        
+        
 
-        &>div{
-          background-color: $col-4;
+        &>div:nth-child(2){
+          @include size(95vw,7vh);
+          @include flex-setting(center,end);
+          
 
-          &>p{
-            color:$col-3;
+          &>div:nth-child(1){
+            @include flex-setting(center,center);
+            @include size(40%,5vh);
+            background-color: $col-4;
+            border-radius: 0.5rem;
+            
+            &>span{
+              color:$col-3;
+              text-align: center;
+              @include size(20vw,3vh);
+            }
+          }
+
+          &>div:nth-child(2){
+            @include flex-setting(center,center);
+            @include size(40%, 5vh);
+            background-color: $col-5;
+            border-radius: 0.5rem;
+            
+
+            &>span{
+              color: $col-1;
+              text-align: center;
+              @include size(20vw,3vh);
+            }
+
+          }
+
+        }
+        // 여기까지 id 로그인, 일회용번호 
+
+        &>div:nth-child(3){
+          @include size(76vw,30vh);
+          @include flex-setting(space-evenly,center,column);
+          background-color:$col-3;
+
+          &>div:nth-child(1){
+            @include size(90%,15vh);
+            @include flex-setting(space-evenly,left,column);
+
+            &>div:nth-child(1){
+              @include size(100%,5vh);
+              background-color: $col-5;
+              @include flex-setting(left,center);
+              border-radius: 0.5rem;
+
+              &>p{
+                color:$col-6;
+                padding-left: 1rem;
+                
+              }
+
+            }
+
+            &>div:nth-child(2){
+              @include size(100%,5vh);
+              background-color: $col-5;
+              @include flex-setting(left,center);
+              border-radius: 0.5rem;
+
+
+              &>p{
+                color:$col-6;
+                padding-left: 1rem;
+              }
+
+            }  
+              
+          }
+          // id, password칸
+
+          &>span:nth-child(2){
+            color:$col-4;
+            text-align:end;
+            font-size: 0.7rem;
+            margin-left: 75%;
+            
+            
+          }
+          // forgot password칸
+
+
+          &>div:nth-child(3){
+            @include flex-setting(space-around,center);
+            @include size(75vw,15vh);
+
+            &>div:nth-child(1){
+              @include size(40vw,7vw);
+              background-color: $col-4;
+              @include flex-setting(center,center);
+              border-radius: 0.5rem;
+
+              &>p{
+                color:$col-3;
+                text-align: center;
+              }
+            }
+
+            &>div:nth-child(2){
+              @include size(25vw,5vw);
+              @include flex-setting(space-around,end);
+
+              &>span:nth-child(1){
+                font-size: 0.5rem;
+                
+              }
+
+              &>div{
+                @include size(4.2rem,1.2rem);
+                background-color: $col-4;
+                border-radius: 2rem;
+                position: relative;
+
+                &>div{
+                  @include size(1rem,1rem);
+                  background-color: $col-6;
+                  border-radius: 50%;
+                  position: absolute;
+                  top:5%;
+                  right: 4%;
+
+                }
+              }
+
+            }
+            // ip, 토글 박스 
+
           }
         }
+        
+
       }
+      // 여기까지 main>section>첫번째 div
+
+
+      &>div:nth-child(2){
+        @include size(76vw,17vh);
+        @include flex-setting(space-around,center,column);
+
+        &>div:nth-child(1){
+          @include size(inherit,7vh);
+          background-color: $col-3;
+          @include flex-setting(space-around,center);
+
+          &>h2{
+            font-size: 1rem;
+          }
+
+          &>div:nth-child(2){
+            @include flex-setting(space-around,center);
+            @include size(25vw,6vh);
+
+            &>span:nth-child(1){
+              font-size: 1rem;
+            }
+
+            &>div:nth-child(2){
+              @include size(2vw,2vh);
+              background-color: $col-4;
+            }
+            // 작은 초록 네모 박스
+
+            &>span:nth-child(3){
+              font-size: 1rem;
+            }
+  
+          }
+
+          &>div:nth-child(3){
+            @include size(10%,4vh);
+            @include flex-setting(space-around,left,column);
+
+            &>span:nth-child(1){
+              @include size(80%,0.4rem);
+              background-color: $col-4;
+              border-radius: 0.3rem;
+            }
+
+            &>span:nth-child(2){
+              @include size(100%,0.4rem);
+              background-color: $col-4;
+              border-radius: 0.3rem;
+            }
+
+            &>span:nth-child(3){
+              @include size(80%,0.4rem);
+              background-color: $col-4;
+              border-radius: 0.3rem;
+            }
+
+          }
+
+        }
+        // 증시, 코스닥
+
+        &>div:nth-child(2){
+          @include size(inherit,7vh);
+          background-color: $col-3;
+          @include flex-setting(space-around,center);
+
+          &>h2{
+            font-size: 1rem;
+          }
+
+          &>span:nth-child(2){
+            font-size: 1rem;
+
+          }
+
+          &>div{
+            @include size(10%,4vh);
+            @include flex-setting(space-around,flex-start,column);
+            
+            &>span:nth-child(1){
+              @include size(100%,0.4rem);
+              background-color: $col-4;
+              border-radius: 0.3rem;
+            }
+
+            &>span:nth-child(2){
+              @include size(60%,0.4rem);
+              background-color: $col-4;
+              border-radius: 0.3rem;
+            }
+
+            &>span:nth-child(3){
+              @include size(100%,0.4rem);
+              background-color: $col-4;
+              border-radius: 0.3rem;
+            }
+
+          }
+
+        }
+        //  날씨, 비온 뒤 땅~ 
+      }
+
+    }
+
+    &>div:nth-child(2){
+
+
+      &>section:nth-child(1){
+        @include size(76vw,70vh);
+        background-color: $col-3;
+        @include flex-setting(center,center,column);
+        position: relative;
+        z-index: 1;
+
+
+        &>div:nth-child(1){
+          @include size(inherit,40vh);
+          @include flex-setting(space-around,initial,column);
+
+
+          &>h2{
+            margin-left: 3rem;
+          }
+
+          &>div:nth-child(2){
+            @include flex-setting(center,center);
+
+            &>div{
+              @include size(80%,25vh);
+              @include flex-setting(center,center);
+              background-color: $col-4;
+
+            
+              &>p{
+                color: $col-3;
+                font-size: 6rem;
+              }
+            
+            }
+
+          }
+          // 여기까지 뉴스, figma
+
+          &>div:nth-child(3){
+            @include size(10vw,5vh);
+            @include flex-setting(space-around,center);
+            margin-left: 3rem;
+
+            &>div:nth-child(1){
+              @include size(2vw,1.5vh );
+              background-color: $col-4;
+            }
+
+            &>div:nth-child(2){
+              @include size(2vw,1.5vh );
+              background-color: $col-5;
+            }
+
+            &>div:nth-child(3){
+              @include size(2vw,1.5vh );
+              background-color: $col-5;
+            }
+          }
+        }
+        // 여기까지 작은 네모 3개
+
+
+        &>div:nth-child(2){
+          @include size(95%,auto);
+          @include flex-setting(space-around,center);
+
+          &>span:nth-child(1){
+            text-align: center;
+            font-size: 1rem;
+            
+          }
+
+          &>div{
+            @include size(6vw,5vh);
+
+            &>span{
+              position: relative;
+
+              &::after{
+                content: "〉";
+                @include size(3vw,3vh);
+                color: $col-4;
+                font-weight: 3rem;
+                position: absolute;
+                left:0.8rem;
+                top:0.5rem;
+                
+              
+              }
+            }
+            
+          }
+
+
+        }
+
+        &>p{
+          @include size(87%,20vh);
+          overflow: hidden;
+
+        }
+
+      } 
+      // 여기까지 충격속보, 영어문장
+
+      &>section:nth-child(2){
+        @include size(76vw,40vh);
+        @include flex-setting(flex-end,center,column);
+        background-color: $col-3;
+        padding-bottom: 5vh;
+        position: relative;
+        top:-9rem;
+        left: 1rem;
+
+      
+        &>div:nth-child(1){
+          @include size(100%,5vh);
+          @include flex-setting(space-around,center);
+
+        
+          &>h3{
+            font-size: 1.5rem;
+
+          }
+
+          &>span:nth-child(2){
+            font-size: 1rem;
+            text-align: center;
+            position: relative;
+
+            &::before{
+              @include size(5rem, 3rem);
+              color: $col-4;
+              content:"|";
+              position: absolute;
+              left:-45px;
+
+            }
+          }
+          &>span:nth-child(3){
+            font-size: 1rem;
+          }
+
+        } 
+
+        &>div:nth-child(2){
+          @include size(100%,5vh);
+          @include flex-setting(space-around,center);
+        
+          &>h3{
+            font-size: 1.5rem;
+
+          }
+
+          &>span:nth-child(2){
+            font-size: 1rem;
+            position: relative;
+          
+
+            &::before{
+              @include size(5rem, 3rem);
+              color: $col-4;
+              content:"|";
+              position: absolute;
+              left:-8px;
+
+            }
+
+          
+          }
+
+          &>span:nth-child(3){
+            font-size: 1rem;
+          }
+
+          &>span:nth-child(4){
+            font-size: 1rem;
+          }
+
+        }
+
+        &>div:nth-child(3){
+          @include size(100%,5vh);
+          @include flex-setting(space-around,center);
+        
+          &>h3{
+            font-size: 1.5rem;
+
+          }
+
+          &>span:nth-child(2){
+            font-size: 1rem;
+            position: relative;
+          
+
+            &::before{
+              @include size(5rem, 3rem);
+              color: $col-4;
+              content:"|";
+              position: absolute;
+              left:-8px;
+
+            }
+
+          
+          }
+
+          &>div{
+            background-color: $col-4;
+            @include size(8vw,4vh );
+            @include flex-setting(center,center);
+            border-radius: 45%;
+
+            &>span{
+              font-size: 0.7rem;
+              color: $col-6;
+              text-align: center;
+            }
+          }
+
+        } 
+
+
+
+      }
+
     }
 
   }
+
+  //mobile
+
+  @media(max-width:768px){
+
+
+  }
+
+  //tablet
+  @media(min-width:769px) and (max-width:1024px){
+
+    &>div{
+      @include size(5vw,221vh);
+      background-color: $col-4;
+      padding-top: 10vh;
+      @include flex-setting(flex-start,center,column);
+  
+        &>div:nth-child(1){
+          @include size(inherit,200vh);
+          @include flex-setting(space-around,center,column);
+          
+        
+  
+          &>div{
+            @include size(0.8rem, 0.8rem);
+            background-color: $col-2;
+            border-radius: 50%;
+          }
+          
+        }
+    }
+    // 여기까지 #root 첫번째 div
+  
+    &>main{
+      @include size(95vw,auto);
+      @include flex-setting(center,center,column);
+      
+      &>section:nth-child(1){
+        @include size(95vw,80vh);
+        @include flex-setting(space-evenly,center,column);
+  
+        &>div:nth-child(1){
+          @include size(95vw,80vh);
+          @include flex-setting(space-evenly,center ,column );
+          
+          
+          &>div:nth-child(1){
+            @include size(95vw,auto );
+            @include flex-setting(center,center);
+  
+            &>div{
+  
+              @include size(45vw,15vh);
+              @include flex-setting(space-evenly,center);
+              
+    
+              &>h1{
+                @include size(20vw,auto );
+                color:$col-4;
+                text-align: center;
+                font-size: 3rem;
+                
+              }
+    
+              &>div{
+                background-color: $col-4;
+                @include size(6rem,auto);
+                @include flex-setting(center,center);
+                border-radius: 0.5rem;
+    
+                &>span{
+                  color:$col-3;
+                  text-align: center;
+                  
+                }
+    
+              }
+    
+            }
+  
+          }
+          // 여기까지 waver. happy 
+          
+          
+  
+          &>div:nth-child(2){
+            @include size(95vw,7vh);
+            @include flex-setting(center,end);
+            
+  
+            &>div:nth-child(1){
+              @include flex-setting(center,center);
+              @include size(40%,7vh);
+              background-color: $col-4;
+              border-radius: 0.5rem;
+              
+              &>span{
+                color:$col-3;
+                text-align: center;
+                @include size(20vw,3vh);
+              }
+            }
+  
+            &>div:nth-child(2){
+              @include flex-setting(center,center);
+              @include size(40%, 7vh);
+              background-color: $col-5;
+              border-radius: 0.5rem;
+              
+  
+              &>span{
+                color: $col-1;
+                text-align: center;
+                @include size(20vw,3vh);
+              }
+  
+            }
+  
+          }
+          // 여기까지 id 로그인, 일회용번호 
+  
+          &>div:nth-child(3){
+            @include size(76vw,30vh);
+            @include flex-setting(space-evenly,center,column);
+            background-color:$col-3;
+  
+            &>div:nth-child(1){
+              @include size(70%,15vh);
+              @include flex-setting(space-evenly,center,column);
+  
+              &>div:nth-child(1){
+                @include size(100%,5vh);
+                background-color: $col-5;
+                @include flex-setting(left,center);
+                border-radius: 0.5rem;
+  
+                &>p{
+                  color:$col-6;
+                  padding-left: 1rem;
+                  
+                }
+  
+              }
+  
+              &>div:nth-child(2){
+                @include size(100%,5vh);
+                background-color: $col-5;
+                @include flex-setting(left,center);
+                border-radius: 0.5rem;
+  
+  
+                &>p{
+                  color:$col-6;
+                  padding-left: 1rem;
+                }
+  
+              }  
+                
+            }
+            // id, password칸
+  
+            &>span{
+              color:$col-4;
+              text-align:end;
+              font-size: 0.7rem;
+              margin-left: 58%;
+              
+              
+            }
+            // forgot password칸
+  
+  
+            &>div:nth-child(3){
+              @include flex-setting(space-around,center);
+              @include size(55vw,15vh);
+  
+              &>div:nth-child(1){
+                @include size(40vw,7vw);
+                background-color: $col-4;
+                @include flex-setting(center,center);
+                border-radius: 0.5rem;
+  
+                &>p{
+                  color:$col-3;
+                  text-align: center;
+                }
+              }
+  
+              &>div:nth-child(2){
+                @include size(20vw,5vw);
+                @include flex-setting(space-around,end);
+  
+                &>span:nth-child(1){
+                  font-size: 0.5rem;
+                  
+                }
+  
+                &>div{
+                  @include size(4.2rem,1.2rem);
+                  background-color: $col-4;
+                  border-radius: 2rem;
+                  position: relative;
+  
+                  &>div{
+                    @include size(1rem,1rem);
+                    background-color: $col-6;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:5%;
+                    right: 4%;
+  
+                  }
+                }
+  
+              }
+              // ip, 토글 박스 
+  
+            }
+          }
+          
+  
+        }
+        // 여기까지 main>section>첫번째 div
+  
+  
+        &>div:nth-child(2){
+          @include size(76vw,25vh);
+          @include flex-setting(space-around,center,column);
+          background-color:$col-6;
+  
+          &>div:nth-child(1){
+            @include size(inherit,7vh);
+            background-color: $col-4;
+            @include flex-setting(space-around,center);
+  
+            &>h2{
+              font-size: 1rem;
+              color:$col-6;
+            }
+  
+            &>div:nth-child(2){
+              @include flex-setting(space-around,center);
+              background-color: $col-4;
+              color:$col-6;
+              @include size(25vw,6vh);
+  
+              &>span:nth-child(1){
+                font-size: 1rem;
+              }
+  
+              &>div:nth-child(2){
+                @include size(2vw,2vh);
+                background-color: $col-6
+
+              }
+              // 작은 초록 네모 박스
+  
+              &>span:nth-child(3){
+                font-size: 1rem;
+              }
+    
+            }
+  
+            &>div:nth-child(3){
+              @include size(10%,4vh);
+              @include flex-setting(space-around,left,column);
+  
+              &>span:nth-child(1){
+                @include size(80%,0.4rem);
+                background-color: $col-6;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(2){
+                @include size(100%,0.4rem);
+                background-color: $col-6;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(3){
+                @include size(80%,0.4rem);
+                background-color: $col-6;
+                border-radius: 0.3rem;
+              }
+  
+            }
+  
+          }
+          // 증시, 코스닥
+  
+          &>div:nth-child(2){
+            @include size(inherit,7vh);
+            background-color: $col-3;
+            @include flex-setting(space-around,center);
+  
+            &>h2{
+              font-size: 1rem;
+            }
+  
+            &>span:nth-child(2){
+              font-size: 1rem;
+  
+            }
+  
+            &>div{
+              @include size(10%,4vh);
+              @include flex-setting(space-around,flex-start,column);
+              
+              &>span:nth-child(1){
+                @include size(100%,0.4rem);
+                background-color: $col-4;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(2){
+                @include size(60%,0.4rem);
+                background-color: $col-4;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(3){
+                @include size(100%,0.4rem);
+                background-color: $col-4;
+                border-radius: 0.3rem;
+              }
+  
+            }
+  
+          }
+          //  날씨, 비온 뒤 땅~ 
+        }
+  
+      }
+
+      &>div:nth-child(2){
+  
+        &>section:nth-child(1){
+          @include size(76vw,70vh);
+          background-color: $col-3;
+          @include flex-setting(center,center,column);
+
+        
+          &>div:nth-child(1){
+            @include size(inherit,40vh);
+            @include flex-setting(space-around,initial,column);
+
+          
+            &>h2{
+              margin-left: 3rem;
+            }
+          
+            &>div:nth-child(2){
+              @include flex-setting(center,center);
+            
+              &>div{
+                @include size(80%,25vh);
+                @include flex-setting(center,center);
+                background-color: $col-4;
+
+              
+                &>p{
+                  color: $col-3;
+                  font-size: 6rem;
+                }
+              
+              }
+            
+            }
+            // 여기까지 뉴스, figma
+          
+            &>div:nth-child(3){
+              @include size(10vw,5vh);
+              @include flex-setting(space-around,center);
+              margin-left: 17rem;
+            
+              &>div:nth-child(1){
+                @include size(2vw,2vh );
+                background-color: $col-4;
+              }
+            
+              &>div:nth-child(2){
+                @include size(2vw,2vh );
+                background-color: $col-5;
+              }
+            
+              &>div:nth-child(3){
+                @include size(2vw,2vh );
+                background-color: $col-5;
+              }
+            }
+          }
+          // 여기까지 작은 네모 3개
+        
+
+          &>div:nth-child(2){
+            @include size(95%,8vh);
+            @include flex-setting(space-around,center);
+          
+            &>span:nth-child(1){
+              text-align: center;
+              font-size: 2rem;
+            }
+          
+            &>div{
+              @include size(6vw,5vh);
+
+              &>span{
+                position: relative;
+  
+                &::after{
+                  content: "〉";
+                  @include size(3vw,3vh);
+                  color: $col-4;
+                  font-weight: 3rem;
+                  position: absolute;
+                  left:3rem;
+                  top:0.5rem;
+                  
+                
+                }
+              }
+            }
+          
+
+          }
+        
+          &>p{
+            @include size(87%,auto);
+          }
+        
+        } 
+        // 여기까지 충격속보, 영어문장
+      
+        &>section:nth-child(2){
+          @include size(76vw,40vh);
+          @include flex-setting(flex-end,center,column);
+          background-color: $col-3;
+          padding-bottom: 5vh;
+          position:relative;
+          left:0;
+
+        
+          &>div:nth-child(1){
+            @include size(100%,5vh);
+            @include flex-setting(space-around,center);
+
+          
+            &>h3{
+              font-size: 1.5rem;
+
+            }
+          
+            &>span:nth-child(2){
+              font-size: 1rem;
+              text-align: center;
+              position: relative;
+            
+              &::before{
+                @include size(5rem, 3rem);
+                color: $col-4;
+                content:"|";
+                position: absolute;
+                left:-45px;
+
+              }
+            }
+            &>span:nth-child(3){
+              font-size: 1rem;
+            }
+          
+          } 
+        
+          &>div:nth-child(2){
+            @include size(100%,5vh);
+            @include flex-setting(space-around,center);
+          
+            &>h3{
+              font-size: 1.5rem;
+
+            }
+          
+            &>span:nth-child(2){
+              font-size: 1rem;
+              position: relative;
+            
+            
+              &::before{
+                @include size(5rem, 3rem);
+                color: $col-4;
+                content:"|";
+                position: absolute;
+                left:-8px;
+
+              }
+
+            
+            }
+          
+            &>span:nth-child(3){
+              font-size: 1rem;
+            }
+          
+            &>span:nth-child(4){
+              font-size: 1rem;
+            }
+          
+          }
+
+          &>div:nth-child(3){
+            @include size(100%,5vh);
+            @include flex-setting(space-around,center);
+          
+            &>h3{
+              font-size: 1.5rem;
+
+            }
+          
+            &>span:nth-child(2){
+              font-size: 1rem;
+              position: relative;
+            
+            
+              &::before{
+                @include size(5rem, 3rem);
+                color: $col-4;
+                content:"|";
+                position: absolute;
+                left:-8px;
+
+              }
+
+            
+            }
+          
+            &>div{
+              background-color: $col-4;
+              @include size(8vw,4vh );
+              @include flex-setting(center,center);
+              border-radius: 45%;
+            
+              &>span{
+                font-size: 0.7rem;
+                color: $col-6;
+                text-align: center;
+              }
+            }
+          
+          
+          
+          } 
+        
+        }
+
+      }
+  
+    }
+
+
+
+  }
+  
+
+  //desktop
+  @media(min-width:1025px){
+
+    &>div{
+      @include size(5vw,150vh);
+      background-color: $col-4;
+      padding-top: 10vh;
+      @include flex-setting(flex-end,center,column);
+      
+  
+        &>div:nth-child(1){
+          @include size(inherit,15vh);
+          @include flex-setting(space-evenly,center,column);
+          margin-bottom: 6rem;
+          
+        
+  
+          &>div{
+            @include size(0.8rem, 0.8rem);
+            background-color: $col-2;
+            
+            
+          }
+          
+        }
+    }
+    // 여기까지 #root 첫번째 div
+  
+    &>main{
+      @include size(95vw,90vh);
+      @include flex-setting(space-around,center);
+      
+      &>section:nth-child(1){
+        @include size(45vw,85vh);
+        @include flex-setting(space-evenly,center,column);
+        margin-bottom: 25rem;
+  
+        &>div:nth-child(1){
+          @include size(45vw,80vw);
+          @include flex-setting(space-evenly,center ,column );
+          
+          
+          &>div:nth-child(1){
+            @include size(45vw,auto);
+            @include flex-setting(flex-end,center);
+  
+            &>div{
+  
+              @include size(35vw,auto);
+              @include flex-setting(space-between,center);
+              
+    
+              &>h1{
+                @include size(20vw,auto );
+                color:$col-4;
+                text-align: center;
+              }
+    
+              &>div{
+                background-color: $col-4;
+                @include size(6rem,auto);
+                @include flex-setting(center,center);
+                border-radius: 0.5rem;
+    
+                &>span{
+                  color:$col-3;
+                  text-align: center;
+                  
+                }
+    
+              }
+    
+            }
+  
+          }
+          // 여기까지 waver. happy 
+          
+          
+  
+          &>div:nth-child(2){
+            @include size(45vw,7vh);
+            @include flex-setting(center,end);
+            
+  
+            &>div:nth-child(1){
+              @include flex-setting(center,center);
+              @include size(40%,7vh);
+              background-color: $col-4;
+              border-radius: 0.5rem;
+              
+              &>span{
+                color:$col-3;
+                text-align: center;
+                @include size(20vw,3vh);
+              }
+            }
+  
+            &>div:nth-child(2){
+              @include flex-setting(center,center);
+              @include size(40%, 7vh);
+              background-color: $col-5;
+              border-radius: 0.5rem;
+              
+  
+              &>span{
+                color: $col-1;
+                text-align: center;
+                @include size(20vw,3vh);
+              }
+  
+            }
+  
+          }
+          // 여기까지 id 로그인, 일회용번호 
+  
+          &>div:nth-child(3){
+            @include size(45vw,30vh);
+            @include flex-setting(space-evenly,center,column);
+            background-color:$col-6;
+  
+            &>div:nth-child(1){
+              @include size(70%,15vh);
+              @include flex-setting(space-evenly,center,column);
+  
+              &>div:nth-child(1){
+                @include size(100%,5vh);
+                background-color: $col-5;
+                @include flex-setting(left,center);
+                border-radius: 0.5rem;
+  
+                &>p{
+                  color:$col-6;
+                  padding-left: 1rem;
+                  
+                }
+  
+              }
+  
+              &>div:nth-child(2){
+                @include size(100%,5vh);
+                background-color: $col-5;
+                @include flex-setting(left,center);
+                border-radius: 0.5rem;
+  
+  
+                &>p{
+                  color:$col-6;
+                  padding-left: 1rem;
+                }
+  
+              }  
+                
+            }
+            // id, password칸
+  
+            &>span{
+              color:$col-4;
+              text-align:end;
+              font-size: 0.7rem;
+              margin-left: 60%;
+              
+              
+            }
+            // forgot password칸
+  
+  
+            &>div:nth-child(3){
+              @include flex-setting(space-evenly,center);
+              @include size(35vw,15vh);
+  
+              &>div:nth-child(1){
+                @include size(18vw,5vw);
+                background-color: $col-4;
+                @include flex-setting(center,center);
+                border-radius: 0.5rem;
+  
+                &>p{
+                  color:$col-3;
+                  text-align: center;
+                }
+              }
+  
+              &>div:nth-child(2){
+                @include size(10vw,5vw);
+                @include flex-setting(space-around,end);
+  
+                &>span:nth-child(1){
+                  font-size: 0.5rem;
+                  
+                }
+  
+                &>div{
+                  @include size(4.2rem,1.2rem);
+                  background-color: $col-4;
+                  border-radius: 2rem;
+                  position: relative;
+                  
+  
+                  &>div{
+                    @include size(1rem,1rem);
+                    background-color: $col-6;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:5%;
+                    right: 4%;
+  
+                  }
+                }
+  
+              }
+              // ip, 토글 박스 
+  
+            }
+          }
+          
+  
+        }
+        // 여기까지 main>section>첫번째 div
+  
+  
+        &>div:nth-child(2){
+          @include size(45vw,35vh);
+          background-color: $col-3;
+          @include flex-setting(space-around,center,column);
+          background-color:$col-6;
+  
+          &>div:nth-child(1){
+            @include size(inherit,7vh);
+            background-color: $col-4;
+            @include flex-setting(space-around,center);
+  
+            &>h2{
+              font-size: 1rem;
+              color:$col-6;
+
+            }
+  
+            &>div:nth-child(2){
+              @include flex-setting(space-around,center);
+              @include size(25vw,6vh);
+              background-color: $col-4;
+              color:$col-6;
+  
+              &>span:nth-child(1){
+                font-size: 1rem;
+              }
+  
+              &>div:nth-child(2){
+                @include size(2vw,2vh);
+                background-color: $col-6
+              }
+              // 작은 초록 네모 박스
+  
+              &>span:nth-child(3){
+                font-size: 1rem;
+              }
+    
+            }
+  
+            &>div:nth-child(3){
+              @include size(10%,4vh);
+              @include flex-setting(space-around,left,column);
+  
+              &>span:nth-child(1){
+                @include size(80%,0.4rem);
+                background-color: $col-6;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(2){
+                @include size(100%,0.4rem);
+                background-color: $col-6;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(3){
+                @include size(80%,0.4rem);
+                background-color: $col-6;
+                border-radius: 0.3rem;
+              }
+  
+            }
+  
+          }
+          // 증시, 코스닥
+  
+          &>div:nth-child(2){
+            @include size(inherit,7vh);
+            background-color: $col-3;
+            @include flex-setting(space-around,center);
+  
+            &>h2{
+              font-size: 1rem;
+            }
+  
+            &>span:nth-child(2){
+              font-size: 1rem;
+  
+            }
+  
+            &>div{
+              @include size(10%,4vh);
+              @include flex-setting(space-around,flex-start,column);
+              background-color: $col-6;
+              
+              &>span:nth-child(1){
+                @include size(100%,0.4rem);
+                background-color: $col-4;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(2){
+                @include size(60%,0.4rem);
+                background-color: $col-4;
+                border-radius: 0.3rem;
+              }
+  
+              &>span:nth-child(3){
+                @include size(100%,0.4rem);
+                background-color: $col-4;
+                border-radius: 0.3rem;
+              }
+  
+            }
+  
+          }
+          //  날씨, 비온 뒤 땅~ 
+        }
+  
+      }
+      
+      div:nth-child(2){
+        @include size(45vw,85vh);
+        @include flex-setting(center,center,column);
+
+        &>section:nth-child(1){
+          @include size(45vw,70vh);
+          background-color: $col-3;
+          @include flex-setting(center,center,column);
+
+        
+          &>div:nth-child(1){
+            @include size(inherit,40vh);
+            @include flex-setting(space-around,initial,column);
+
+          
+            &>h2{
+              margin-left: 3rem;
+            }
+          
+            &>div:nth-child(2){
+              @include flex-setting(center,center);
+            
+              &>div{
+                @include size(70%,20vh);
+                @include flex-setting(center,center);
+                background-color: $col-4;
+
+              
+                &>p{
+                  color: $col-3;
+                  font-size: 6rem;
+                }
+              
+              }
+            
+            }
+            // 여기까지 뉴스, figma
+          
+            &>div:nth-child(3){
+              @include size(7vw,3vh);
+              @include flex-setting(space-around,center);
+              margin-left: 16rem;
+            
+              &>div:nth-child(1){
+                @include size(1.5vw,2vh );
+                background-color: $col-4;
+              }
+            
+              &>div:nth-child(2){
+                @include size(1.5vw,2vh );
+                background-color: $col-5;
+              }
+            
+              &>div:nth-child(3){
+                @include size(1.5vw,2vh );
+                background-color: $col-5;
+              }
+            }
+          }
+          // 여기까지 작은 네모 3개
+        
+
+          &>div:nth-child(2){
+            @include size(95%,8vh);
+            @include flex-setting(space-around,center);
+          
+            &>span:nth-child(1){
+              text-align: center;
+              font-size: 2rem;
+            }
+          
+            &>div{
+              @include size(4vw,4vh);
+
+              &>span{
+                position: relative;
+  
+                &::after{
+                  content: "〉";
+                  @include size(3vw,3vh);
+                  color: $col-4;
+                  font-weight: 3rem;
+                  position: absolute;
+                  left:-0.4rem;
+                  top:-0.6rem;
+                  
+                
+                }
+              }
+
+            }
+          
+
+          }
+        
+          &>p{
+            @include size(87%,15vh);
+            overflow: hidden;
+          }
+        
+        } 
+        // 여기까지 충격속보, 영어문장
+      
+        &>section:nth-child(2){
+          @include size(45vw,25vh);
+          @include flex-setting(flex-end,center,column);
+          background-color: $col-3;
+          position: relative;
+          top:-1rem;
+          left:0;
+          
+
+        
+          &>div:nth-child(1){
+            @include size(100%,3vh);
+            @include flex-setting(space-around,center);
+            margin-top: 1rem;
+
+          
+            &>h3{
+              font-size: 1.5rem;
+
+            }
+          
+            &>span:nth-child(2){
+              font-size: 1rem;
+              text-align: center;
+              position: relative;
+              
+            
+              &::before{
+                @include size(5rem, 3rem);
+                color: $col-4;
+                content:"|";
+                position: absolute;
+                left:-45px;
+
+              }
+            }
+            &>span:nth-child(3){
+              font-size: 1rem;
+              
+            }
+          
+          } 
+        
+          &>div:nth-child(2){
+            @include size(100%,3vh);
+            @include flex-setting(space-around,center);
+            margin-top: 1rem;
+            margin-left: 2rem;
+          
+            &>h3{
+              font-size: 1.5rem;
+
+            }
+          
+            &>span:nth-child(2){
+              font-size: 1rem;
+              position: relative;
+            
+            
+              &::before{
+                @include size(5rem, 3rem);
+                color: $col-4;
+                content:"|";
+                position: absolute;
+                left:-8px;
+
+              }
+
+            
+            }
+          
+            &>span:nth-child(3){
+              font-size: 1rem;
+            }
+          
+            &>span:nth-child(4){
+              font-size: 1rem;
+            }
+          
+          }
+
+          &>div:nth-child(3){
+            @include size(100%,3vh);
+            @include flex-setting(space-around,center);
+            margin-top: 1rem;
+            
+            &>h3{
+              font-size: 1.5rem;
+
+            }
+          
+            &>span:nth-child(2){
+              font-size: 1rem;
+              position: relative;
+            
+            
+              &::before{
+                @include size(5rem, 3rem);
+                color: $col-4;
+                content:"|";
+                position: absolute;
+                left:-8px;
+
+              }
+
+            
+            }
+          
+            &>div{
+              background-color: $col-4;
+              @include size(8vw,3vh );
+              @include flex-setting(center,center);
+              border-radius: 45%;
+            
+              &>span{
+                font-size: 0.7rem;
+                color: $col-6;
+                text-align: center;
+              }
+            }
+          
+
+          
+          } 
+        
+        }
+
+      }
+    
+      
+  
+    }
+
+  }
+
 
 }
